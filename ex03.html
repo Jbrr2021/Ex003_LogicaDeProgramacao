@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculadora de Notas</title>
+    <script type="text/javascript">
+      function calcularNotasWhile() {
+        var contador = 0;
+        var soma = 0;
+
+        while (contador < 10) {
+          var nota = parseFloat(
+            prompt("Digite a nota " + (contador + 1) + ":")
+          );
+          soma += nota;
+          contador++;
+        }
+
+        var media = soma / 10;
+        alert(
+          "A média das notas é: " +
+            media.toFixed(2) +
+            "\nA soma das notas é: " +
+            soma.toFixed(2)
+        );
+      }
+
+      function calcularNotasDoWhile() {
+        var contador = 0;
+        var soma = 0;
+
+        do {
+          var nota = parseFloat(
+            prompt("Digite a nota " + (contador + 1) + ":")
+          );
+          soma += nota;
+          contador++;
+        } while (contador < 10);
+
+        var media = soma / 10;
+        alert(
+          "A média das notas é: " +
+            media.toFixed(2) +
+            "\nA soma das notas é: " +
+            soma.toFixed(2)
+        );
+      }
+    </script>
+  </head>
+  <body>
+    <button onclick="calcularNotasWhile()">Calcular Notas (While)</button>
+    <button onclick="calcularNotasDoWhile()">Calcular Notas (Do-While)</button>
+  </body>
+</html>

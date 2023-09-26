@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Verificação de Número</title>
+    <script type="text/javascript">
+      function verificarNumero() {
+        var numero = parseInt(prompt("Digite um número entre 10 e 25:"));
+
+        while (numero < 10 || numero > 25) {
+          alert("Entrada inválida. Por favor, digite um número entre 10 e 25.");
+          numero = parseInt(prompt("Digite um número entre 10 e 25:"));
+        }
+
+        alert("Você digitou o número: " + numero);
+      }
+    </script>
+  </head>
+  <body>
+    <button onclick="verificarNumero()">Verificar Número</button>
+  </body>
+</html>

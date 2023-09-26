@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Números de 1 a 50</title>
+    <script type="text/javascript">
+      function mostrarNumerosWhile() {
+        var numero = 1;
+        var output = "";
+
+        while (numero <= 50) {
+          output += numero + "<br>";
+          numero++;
+        }
+
+        document.getElementById("resultado").innerHTML = output;
+      }
+
+      function mostrarNumerosDoWhile() {
+        var numero = 1;
+        var output = "";
+
+        do {
+          output += numero + "<br>";
+          numero++;
+        } while (numero <= 50);
+
+        document.getElementById("resultado").innerHTML = output;
+      }
+    </script>
+  </head>
+  <body>
+    <button onclick="mostrarNumerosWhile()">Mostrar Números (While)</button>
+    <button onclick="mostrarNumerosDoWhile()">
+      Mostrar Números (Do-While)
+    </button>
+    <div id="resultado"></div>
+  </body>
+</html>

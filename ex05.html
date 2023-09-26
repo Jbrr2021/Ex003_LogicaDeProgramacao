@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Soma de Números Positivos</title>
+    <script type="text/javascript">
+      function calcularSoma() {
+        var soma = 0;
+        var numero;
+
+        do {
+          numero = parseInt(
+            prompt(
+              "Digite um número positivo (ou um número negativo para sair):"
+            )
+          );
+
+          if (numero > 0) {
+            soma += numero;
+          }
+        } while (numero >= 0);
+
+        alert("A soma dos números positivos é: " + soma);
+      }
+    </script>
+  </head>
+  <body>
+    <h1>Soma de Números Positivos</h1>
+    <button onclick="calcularSoma()">Calcular Soma</button>
+  </body>
+</html>
